@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio 5 Tahun Mendatang</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* --- HEADER / BANNER (BIRU) --- */
+        header {
+            background-color: #3b82f6; 
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- LAYOUT UTAMA --- */
+        .wrapper {
+            display: flex;
+            flex: 1;
+        }
+
+        /* --- SIDEBAR MENU (KUNING) --- */
+        .sidebar {
+            background-color: #eab308; 
+            width: 25%;
+            padding: 40px 30px;
+        }
+
+        .sidebar ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 18px;
+            color: #000;
+        }
+
+        .sidebar ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            text-decoration: underline;
+        }
+
+        /* --- KONTEN UTAMA (COKELAT TUA) --- */
+        .content-area {
+            background-color: #78350f; 
+            color: white;
+            width: 75%;
+            padding: 45px 50px;
+        }
+
+        /* Menyembunyikan tab konten yang tidak aktif */
+        .tab-content {
+            display: none;
+        }
+
+        /* Menampilkan tab konten yang aktif */
+        .tab-content.active {
+            display: block;
+        }
+
+        .content-area h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .content-area p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+        
+        .content-area ul {
+            padding-left: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-area ul li {
+            margin-bottom: 10px;
+        }
+
+        /* --- FOOTER (HIJAU) --- */
+        footer {
+            background-color: #0f766e; 
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 1.15rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* Responsif untuk tampilan HP / Layar Kecil */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+            }
+            .sidebar, .content-area {
+                width: 100%;
+            }
+            .sidebar {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        {{ Tambahkan Gambar Banner dan Foto Terbaik Anda }}
+    </header>
+
+    <div class="wrapper">
+        
+        <nav class="sidebar">
+            <ul>
+                <li><a onclick="openTab(event, 'profil')" id="defaultOpen" class="tab-link">Profil</a></li>
+                <li><a onclick="openTab(event, 'pendidikan')" class="tab-link">Riwayat Pendidikan</a></li>
+                <li><a onclick="openTab(event, 'organisasi')" class="tab-link">Riwayat Organisasi</a></li>
+                <li><a onclick="openTab(event, 'pekerjaan')" class="tab-link">Riwayat Pekerjaan</a></li>
+                <li><a onclick="openTab(event, 'karya')" class="tab-link">Karya Tulis / Produk</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            
+            <div id="profil" class="tab-content">
+                <h2>Portofolio Saya 5 Tahun Mendatang</h2>
+                <p>Nama saya Alza, seorang lulusan Sistem Informasi. Dalam 5 tahun ke depan, saya menjadi operator terbaik yang mampu bekerja secara profesional, produktif, dan bertanggung jawab di perusahaan unggulan.</p>
+                <p>Fokus utama saya adalah mengembangkan diri menjadi operator berprestasi, berdaya saing tinggi, dan berintegritas, yang mampu menciptakan kinerja unggul serta mendukung pertumbuhan perusahaan menuju kesuksesan berkelanjutan.</p>
+                <p>UI/UX memastikan setiap elemen visual tersusun rapi dan konsisten</p>
+                <p>IT project manager:menjadi IT Project manager yang kompeten dalam memimpin proyek teknologi, mengelola sumber daya secara efektif, dan menghasilkan solusi yang bernilai bagi perusahaan 
+                </p>
+            </div>
+
+            <div id="pendidikan" class="tab-content">
+                <h2>Riwayat Pendidikan</h2>
+                <p>Berikut adalah riwayat pendidikan:</p>
+                <ul>
+                    <li><strong>Perjalanan akademik saya</strong><br>dibangun melalui institusi-institusi terbaik di sarolangun, yaitu SDN 29 Lubuk Sayak,MTSN 1 Sarolsngun, dan SMKN 7 Sarolangun. Didorong oleh minat yang besar pada perkembangan teknologi, saat ini saya melanjutkan studi di program studi Sistem Informasi UIN STS Jambi. Berbekal ilmu yang saya dapati sekarang, saya memiliki target dan insyaallah akan meneruskan pendidikan ke tingkat S2 (Pascasarjana) demi meneruskan keahlian serta memberikan kontribusi yang lebih besar di industri teknologi informasi.</li> 
+                </ul>
+                </div>
+    
+
+            <div id="organisasi" class="tab-content">
+                <h2>Riwayat Organisasi</h2>
+             Google Developer Student Clubs (GDSC):</p>
+                <ul>
+                    <li><strong>Di samping akademik, saya merupakan pribadi yang aktif dalam berbagai kegiatan organisasi dan pengembangan diri. Sejak MTS,saya telah terlibat dalam organisasi Pramuka yang membantu saya mengembangkan kemampuan kepemimpinan, kedisiplinan, tanggung jawab, serta kerja sama tim. Ketika melanjutkan pendidikan di SMK, saya kembali aktif dalam organisasi Pramuka, sehingga semakin memperkuat keterampilan organisasi, kemandirian, dan kemampuan beradaptasi dalam berbagai situasi. Melalui berbagai kegiatan dan pengelaman yang saya peroleh, saya berkembang menjadi pribadi yang disiplin,komunikatif, tangguh, serta mampu bekerja sama dengan baik dalam lingkungan organisasi maupun profesional.</li>
+                </ul>
+            </div>
+
+            <div id="pekerjaan" class="tab-content">
+                <h2>Riwayat Pekerjaan</h2>
+                <p>Pengalaman kerja;</p>
+                <ul>
+                    <li><strong>Meskipun belum memiliki pengelaman kerja formal, saya aktif mengembangkan kompetensi melalui pendidikan, organisasi, dan berbagai kegiatan pengembangan diri. Sebagai mahasiswa Sistem Informasi, manajemen data, dan keterampilan digital yang relevan dengan kebutuhan industri. Saya berkomitmen untuk terus meningkatkan kemampuan agar siap berkontribusi secara profesional setelah lulus.</li>
+                </ul>
+            </div>
+
+            <div id="karya" class="tab-content">
+                <h2>Karya Tulis / Produk</h2>
+                <p>Produk teknologi serta karya tulis yang telah dikembangkan:</p>
+                <ul>
+                    <li><strong>Saat ini saya masih berada pada tahap penguatan kompetensi di bidang Sistem Informasi melalui kegiatan akademik, pembelajaran mandiri, serta berbagai proyek latihan. Meskipun belum menghasilkan karya tulis ilmiah maupun produk teknologi yang dipublikasikan secara resmi, saya memiliki komitmen untuk terus mengembangkan kemampuan dan mewujudkan berbagai inovasi di masa mendatang. Dalam lima tahun ke depan, saya menargetkan diri untuk berkontribusi melalui pengembangan sistem informasi yang efektif, perancangan basis data yang terstruktur, serta pembangunan aplikasi yang mampu memberikan solusi terhadap kebutuhan pengguna. Selain itu, saya juga berencana menghasilkan karya ilmiah yang membahas pemanfaatan teknologi informasi, transformasi digital, dan pengembangan sistem yang mendukung peningkatan efisiensi di berbagai sektor. Melalui proses belajar yang berkelanjutan, saya berharap dapat menjadi profesional yang mampu menciptakan solusi teknologi yang inovatif, bermanfaat, dan bernilai bagi masyarakat maupun dunia industri.</li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        "Terus Belajar, Berkembang, dan Bermanfaat"
+    </footer>
+
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            
+            // Menyembunyikan seluruh isi tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Menghapus garis bawah/status aktif pada teks menu kiri
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Memunculkan tab yang sedang dipilih dan memberikan efek aktif
+            document.getElementById(tabId).classList.add("active");
+            if (evt) {
+                evt.currentTarget.classList.add("active");
+            }
+        }
+
+        // Otomatis membuka menu 'Profil' saat halaman pertama kali diakses
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
